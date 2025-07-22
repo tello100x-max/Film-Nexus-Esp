@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cómo entrenar a tu dragón (Live Action)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    img {
+      width: 100%;
+      border-radius: 12px;
+      max-height: 400px;
+      object-fit: cover;
+    }
+    h1 {
+      color: #00bfff;
+    }
+    .download-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #00bfff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 8px 16px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .comment-section {
+      margin-top: 40px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 8px;
+      padding: 10px;
+      resize: none;
+      font-family: inherit;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #00bfff;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .disabled {
+      background-color: #444;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cómo entrenar a tu dragón (Live Action)</h1>
+    <img src="como-entrenar-live-action.png" alt="Dragon">
+    <p><strong>Año:</strong> 2025</p>
+    <p><strong>Director:</strong> Dean DeBlois</p>
+    <p><strong>Sinopsis:</strong> En esta nueva versión con actores reales, Hipo y Chimuelo se embarcan en una aventura que cambiará el destino de su pueblo. Una historia de valentía y amistad llevada al siguiente nivel con efectos asombrosos.</p>
+
+    <a href="https://cuty.io/FilmNexusEsp" class="download-button">🔽 Descargar Película</a>
+
+    <div class="comment-section">
+      <h2>💬 Deja tu comentario</h2>
+      <textarea id="commentBox" placeholder="Escribe tu opinión aquí..."></textarea>
+      <button onclick="submitComment()" id="submitBtn">Enviar Comentario</button>
+    </div>
+
+    <a href="index.html" class="back-button">⬅️ Volver al inicio</a>
+  </div>
+
+  <script>
+    function submitComment() {
+      const comment = document.getElementById("commentBox").value;
+      if (comment.trim() === "") {
+        alert("El comentario no puede estar vacío.");
+        return;
+      }
+      if (localStorage.getItem("dragonCommented")) {
+        alert("Ya has enviado un comentario.");
+        return;
+      }
+      alert("¡Gracias por tu comentario!");
+      document.getElementById("submitBtn").classList.add("disabled");
+      document.getElementById("submitBtn").disabled = true;
+      localStorage.setItem("dragonCommented", "true");
+    }
+
+    // Verificar si ya comentaron
+    window.onload = function () {
+      if (localStorage.getItem("dragonCommented")) {
+        document.getElementById("submitBtn").classList.add("disabled");
+        document.getElementById("submitBtn").disabled = true;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Film Nexus ESP</title>
   <style>
     body {
@@ -30,6 +31,7 @@
       padding: 20px;
       margin-bottom: 30px;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      cursor: pointer;
     }
     .movie-card img {
       width: 100%;
@@ -58,6 +60,14 @@
       text-align: center;
       color: #888;
     }
+    .badge {
+      background-color: red;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-size: 0.8em;
+      margin-left: 10px;
+    }
   </style>
 </head>
 <body>
@@ -66,27 +76,25 @@
   </header>
   <div class="container">
 
-    <!-- PELÍCULA 1 -->
-    <div class="movie-card">
-      <img src="https://m.media-amazon.com/images/I/81KkrQWEHIL._AC_SL1500_.jpg" alt="Cómo entrenar a tu dragón">
+    <!-- PELÍCULA 1 (LIVE ACTION) -->
+    <div class="movie-card" onclick="location.href='dragon.html'">
+      <img src="como-entrenar-live-action.png" alt="Cómo entrenar a tu dragón live action">
       <div class="movie-info">
-        <h2>CÓMO ENTRENAR A TU DRAGÓN</h2>
-        <p><strong>Año:</strong> 2010</p>
-        <p><strong>Director:</strong> Chris Sanders y Dean DeBlois</p>
-        <p><strong>Descripción:</strong> En una isla vikinga, un joven llamado Hipo entabla una amistad inesperada con un dragón herido. Juntos desafían las normas de su tribu y demuestran que humanos y dragones pueden convivir.</p>
-        <a href="https://cuty.io/FilmNexusEsp" class="download-button">🔽 Descargar Película</a>
+        <h2>CÓMO ENTRENAR A TU DRAGÓN (LIVE ACTION) <span class="badge">🆕 NUEVA</span></h2>
+        <p><strong>Año:</strong> 2025</p>
+        <p><strong>Director:</strong> Dean DeBlois</p>
+        <p><strong>Sinopsis:</strong> Hipo y Chimuelo cobran vida real en esta versión live action repleta de aventura y amistad.</p>
       </div>
     </div>
 
-    <!-- PELÍCULA 2 (Espacio ya preparado) -->
-    <div class="movie-card">
+    <!-- PELÍCULA 2 -->
+    <div class="movie-card" onclick="location.href='gladiador.html'">
       <img src="https://cdn.wallpapersafari.com/99/40/nIFKy1.jpg" alt="Gladiador 2">
       <div class="movie-info">
         <h2>GLADIADOR 2</h2>
         <p><strong>Año:</strong> 2024</p>
         <p><strong>Director:</strong> Ridley Scott</p>
-        <p><strong>Descripción:</strong> La esperada secuela del clásico "Gladiador", que sigue la historia de Lucius, el joven hijo de Lucilla, mientras se enfrenta a un nuevo imperio y su propio destino.</p>
-        <a href="#" class="download-button">🔽 Descargar Película (Próximamente)</a>
+        <p><strong>Sinopsis:</strong> La esperada secuela del clásico, centrada en el joven Lucius y su destino en el nuevo imperio.</p>
       </div>
     </div>
 
